@@ -21,7 +21,7 @@
 body {
     font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
     line-height: 1.6;
-    color: var(--apple-black);
+    color: #000000;
     background: #ffffff;
     min-height: 100vh;
     position: relative;
@@ -31,33 +31,33 @@ body {
 
 /* Dark mode toggle */
 body.dark-mode {
-    background: #f5f5f5;
-    color: #333333;
+    background: #ffffff;
+    color: #000000;
 }
 
 body.dark-mode .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
 }
 
 body.dark-mode section {
     background: #ffffff;
-    border-color: rgba(0, 255, 65, 0.3);
+    border-color: #007aff;
 }
 
 body.dark-mode .code-snippet,
 body.dark-mode #paragliding {
-    background: #f8f8f8;
-    border-color: var(--terminal-green);
+    background: #ffffff;
+    border-color: #007aff;
 }
 
 body.dark-mode .skill-card {
-    background: linear-gradient(135deg, #ffffff, #f8f8f8);
-    border-color: rgba(0, 255, 65, 0.2);
+    background: #ffffff;
+    border-color: #007aff;
 }
 
 body.dark-mode footer {
-    background: #f8f8f8;
-    border-color: var(--terminal-green);
+    background: #ffffff;
+    border-color: #007aff;
 }
 
 /* Apple-style Navigation */
@@ -66,8 +66,7 @@ body.dark-mode footer {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
+    background: #ffffff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 0 20px;
@@ -143,7 +142,7 @@ body.dark-mode footer {
     align-items: center;
     min-height: 100vh;
     padding: 120px 20px 80px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: #ffffff;
     position: relative;
 }
 
@@ -157,7 +156,7 @@ body.dark-mode footer {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 24px;
-    color: #000000;
+    color: #007aff;
 }
 
 .hero-subtitle {
@@ -165,7 +164,7 @@ body.dark-mode footer {
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 32px;
-    color: #1d1d1f;
+    color: #000000;
 }
 
 .hero-description {
@@ -226,6 +225,7 @@ body.dark-mode footer {
     padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background: #ffffff;
 }
 
 .section-header {
@@ -237,12 +237,12 @@ body.dark-mode footer {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #000000;
+    color: #007aff;
 }
 
 .section-subtitle {
     font-size: 21px;
-    color: #1d1d1f;
+    color: #000000;
     margin-bottom: 0;
 }
 
@@ -260,6 +260,7 @@ body.dark-mode footer {
     text-align: center;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .content-card:hover {
@@ -276,12 +277,12 @@ body.dark-mode footer {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: #000000;
+    color: #007aff;
 }
 
 .content-card p {
     font-size: 17px;
-    color: #1d1d1f;
+    color: #000000;
     line-height: 1.5;
     margin: 0;
 }
@@ -1003,11 +1004,10 @@ body::before {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 1.0);
+    background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 65, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -1189,14 +1189,14 @@ section p {
 /* Code blocks */
 .code-snippet {
     background: #ffffff;
-    color: var(--terminal-green);
+    color: #007aff;
     padding: 15px;
     border-radius: 6px;
     margin: 15px 0;
     font-family: 'SF Mono', monospace;
     font-size: 0.9em;
     overflow-x: auto;
-    border-left: 3px solid var(--terminal-green);
+    border-left: 3px solid #007aff;
 }
 
 #paragliding .code-snippet {
@@ -1213,8 +1213,8 @@ section p {
 
 /* Parfum Section */
 #parfum {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
-    color: #333333;
+    background: #ffffff;
+    color: #000000;
     padding: 60px 20px;
     text-align: center;
     border-radius: 20px;
@@ -1241,16 +1241,16 @@ section p {
 }
 
 #parfum h2 {
-    color: var(--terminal-green);
+    color: #007aff;
     font-size: 2.5em;
     margin-bottom: 30px;
-    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
     animation: perfume-glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes perfume-glow {
-    0% { text-shadow: 0 0 20px rgba(0, 255, 65, 0.5); }
-    100% { text-shadow: 0 0 30px rgba(0, 255, 65, 0.8), 0 0 40px rgba(0, 255, 65, 0.4); }
+    0% { text-shadow: 0 0 20px rgba(0, 122, 255, 0.3); }
+    100% { text-shadow: 0 0 30px rgba(0, 122, 255, 0.5), 0 0 40px rgba(0, 122, 255, 0.3); }
 }
 
 #parfum .photo-container {
