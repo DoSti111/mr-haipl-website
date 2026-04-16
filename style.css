@@ -1132,18 +1132,22 @@ header h2 {
 
 /* Main content with card design */
 main {
-    padding: 20px;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 section {
     background: #ffffff;
-    margin: 20px 0;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 80px 20px;
+    border-radius: 0;
+    box-shadow: none;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 section::before {
@@ -1476,13 +1480,15 @@ section p {
 /* Footer */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 80px 20px;
     background: #ffffff;
     color: #000000;
-    margin: 40px 20px 20px;
-    border-radius: 8px;
+    margin: 0;
+    border-radius: 0;
     font-family: 'SF Mono', monospace;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Responsive design */
