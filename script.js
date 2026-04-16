@@ -224,11 +224,25 @@ function updateCurrentDate() {
     }
 }
 
+// Matrix loader functionality
+function hideMatrixLoader() {
+    const matrixLoader = document.getElementById('matrixLoader');
+    if (matrixLoader) {
+        matrixLoader.style.opacity = '0';
+        setTimeout(() => {
+            matrixLoader.style.display = 'none';
+        }, 1000);
+    }
+}
+
 // Update date on page load
 document.addEventListener('DOMContentLoaded', () => {
     updateCurrentDate();
     // Update every minute to keep it current
     setInterval(updateCurrentDate, 60000);
+    
+    // Hide Matrix loader after 3 seconds
+    setTimeout(hideMatrixLoader, 3000);
 });
 
 // Add CSS animation keyframes dynamically
