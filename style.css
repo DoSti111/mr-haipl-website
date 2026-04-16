@@ -974,6 +974,135 @@ section p {
     border-left: 3px solid var(--terminal-green);
 }
 
+#paragliding .code-snippet {
+    background: rgba(0, 255, 65, 0.1);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    color: var(--terminal-green);
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Parfum Section */
+#parfum {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 2px solid var(--terminal-orange);
+    position: relative;
+}
+
+#parfum::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" fill="%2300ff41" opacity="0.05">👔</text></svg>') repeat;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#parfum > * {
+    position: relative;
+    z-index: 2;
+}
+
+#parfum h2 {
+    color: var(--terminal-orange);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+    animation: perfume-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes perfume-glow {
+    0% { text-shadow: 0 0 20px rgba(255, 165, 0, 0.5); }
+    100% { text-shadow: 0 0 30px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.4); }
+}
+
+#parfum .photo-container {
+    margin-bottom: 40px;
+}
+
+#parfum .photo-frame {
+    border: 3px solid var(--terminal-orange);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+}
+
+#parfum .photo-frame:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 0 40px rgba(255, 165, 0, 0.5);
+}
+
+#parfum .code-snippet {
+    background: rgba(255, 165, 0, 0.1);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    color: var(--terminal-orange);
+    padding: 25px;
+    border-radius: 8px;
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#parfum .skill-card {
+    background: rgba(255, 165, 0, 0.05);
+    border: 1px solid rgba(255, 165, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#parfum .skill-card h3 {
+    color: var(--terminal-orange);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#parfum .interactive-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#parfum .interactive-button {
+    background: linear-gradient(135deg, var(--terminal-orange), #ff8c00);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#parfum .interactive-button:hover {
+    background: linear-gradient(135deg, #ff8c00, var(--terminal-orange));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
 /* Skills grid */
 .skills-grid {
     display: grid;
