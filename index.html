@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Haipl – The Apple Oracle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">INITIALIZING MR. HAIPL SYSTEM...</div>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="interactive-button" id="darkModeToggle" onclick="toggleDarkMode()">🌙 DARK MODE</button>
+    
+    <!-- Interactive Terminal Commands -->
+    <button class="interactive-button" onclick="executeCommand('sudo rm -rf /windows/*')">🗑️ WINDOWS DELETE</button>
+    <button class="interactive-button" onclick="executeCommand('sudo apt-get install common-sense')">🧠 INSTALL COMMON SENSE</button>
+    
+    <!-- Glitch Text Easter Egg -->
+    <div class="glitch-text" data-text="EASTER EGG ACTIVATED" onclick="activateGlitch()">SYSTEM COMPROMISED</div>
+    
+    <!-- Swipe Sections -->
+    <div class="swipe-section">
+        <div class="swipe-card">
+            <h3>Swipe für Easter Eggs</h3>
+            <div class="code-snippet">← Swipe für versteckte Features</div>
+        </div>
+    </div>
+    <header>
+    <div class="terminal-header">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+    </div>
+    <div class="terminal-content">
+        <h1>Mr. Haipl – The Apple Oracle</h1>
+        <h2>Wenn Apple etwas kann, kann er es besser. Seit 1984.</h2>
+        <div class="photo-container">
+            <div class="photo-frame">
+                <img src="MrHaipl.JPG" alt="Mr. Haipl - Der Apple Guru">
+                <div class="scan-line"></div>
+            </div>
+        </div>
+    </div>
+</header>
+    <main>
+                <section id="about">
+            <h2>System-Informationen</h2>
+            <div class="code-snippet">
+                <div class="clickable-command" onclick="executeCommand('wer_bin_ich')">$ wer_bin_ich<br>
+                mr_haipl_apple_orakel<br><br>
+                <div class="clickable-command" onclick="executeCommand('uname -a')">$ uname -a<br>
+                Darwin kernel 1984.0.0 AppleOracle-Edition<br><br>
+                <div class="clickable-command" onclick="executeCommand('history | grep -E \'(design|apple|mac)\'')">$ history | grep -E '(design|apple|mac)'<br>
+                ... 42.1337 Einträge gefunden<br><br>
+                <div class="clickable-command" onclick="executeCommand('blacklist_check --os')">$ blacklist_check --os<br>
+                Windows: BLOCKIERT<br>
+                Android: BLOCKIERT<br>
+                Linux: "Nur für Server"
+            </div>
+            <p>Gelernter Grafiker. Seit 1984 am System. Kennt jede Pixel-Perfektion, jeden Design-Grundsatz, jeden Terminal-Befehl. Wenn Cupertino eine neue Idee hat, hat Mr. Haipl sie schon gestern implementiert. Sein Auge für Details ist präziser als ein Retina-Display bei 300dpi. Windows-Nutzer betrachtet er als Menschen in Not, die dringend Rettung brauchen.</p>
+        </section>
+        <section id="skills">
+            <h2>Technische Spezifikationen</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Design-Stack</h3>
+                    <div class="code-snippet">
+                        Adobe Creative Suite CC<br>
+                        Sketch, Figma, Principle<br>
+                        After Effects (Experte)<br>
+                        Typografie: 10/10
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Apple-Ökosystem</h3>
+                    <div class="code-snippet">
+                        macOS: Power-User<br>
+                        iOS: Jailbreak-Pionier<br>
+                        watchOS: Haipl Edition<br>
+                        macOS Sonoma: Experte
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Entwicklung</h3>
+                    <div class="code-snippet">
+                        Swift, SwiftUI<br>
+                        Objective-C (Legacy)<br>
+                        WebKit Debugging<br>
+                        Automation: Shortcuts Pro
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Hardware</h3>
+                    <div class="code-snippet">
+                        MacBook Air M2 2022 (15")<br>
+                        iPhone 17 ("eigentlich iPhone 19 Pro" 🤫)<br>
+                        iPhone 7 (Backup für Sterbliche 😅)<br>
+                        Apple Watch (Haipl Edition)
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="favorites">
+            <h2>Konfigurations-Präferenzen</h2>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Kategorie</th>
+                        <th>Spezifikation</th>
+                        <th>Priorität</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🍝 Treibstoff</td>
+                        <td>Italienische Küche (Design-Inspiriert)</td>
+                        <td>Kritisch</td>
+                    </tr>
+                    <tr>
+                        <td>🥃 Performance</td>
+                        <td>Single Malt Scotch</td>
+                        <td>Hoch</td>
+                    </tr>
+                    <tr>
+                        <td>🌴 Umgebung</td>
+                        <td>Karibische Inseln (Niedrige Latenz)</td>
+                        <td>Essenziell</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="status">
+            <h2>Aktueller Status</h2>
+            <div class="cli-prompt">
+                <div class="clickable-command" onclick="executeCommand('whoami')">$ whoami<br>status --detailliert</div>
+                <div class="cli-line">Apple-Ökosystem: <span style="color: #34c759">OPTIMAL</span></div>
+                <div class="cli-line">Design-Inspiration: <span style="color: #007aff">FLOW_STATE</span></div>
+                <div class="cli-line">Siri-Beziehung: <span style="color: #ff9500">VERBESSERUNG_LÄUFT</span></div>
+                <div class="cli-line">Windows-Toleranz: <span style="color: #ff3b30">NULL_POINTER_EXCEPTION</span></div>
+                <div class="cli-line">Android-Kompatibilität: <span style="color: #ff3b30">SEGMENTATION_FAULT</span></div>
+            </div>
+            <p>Momentan experimentiert er mit der Integration von Machine Learning in Design-Workflows und versucht, Siri dazu zu bringen, komplexe Design-Kritik zu verstehen. Gleichzeitig entwickelt er einen Emulator für Windows, nur um es besser zu machen als Microsoft selbst. Die Ergebnisse sind... vielversprechend für Version 2.0.</p>
+            <div class="code-snippet">
+                <div class="clickable-command" onclick="executeCommand('echo &quot;Windows ist kein Virus, Viren tun wenigstens etwas&quot;')">$ echo &quot;Windows ist kein Virus, Viren tun wenigstens etwas&quot;<br>
+                > System-Fehler: Logik-Widerspruch erkannt<br><br>
+                <div class="clickable-command" onclick="executeCommand('rm -rf /windows/*')">$ rm -rf /windows/*<br>
+                > Zugriff verweigert: Selbst root kann dieses Chaos nicht reparieren<br><br>
+                <div class="clickable-command" onclick="executeCommand('android --version')">$ android --version<br>
+                > Fehler: Inkompatibel mit menschlicher Intelligenz
+            </div>
+        </section>
+        
+        <!-- Neue Sektion: Haipl am Surfbrett -->
+        <section id="surfboard">
+            <h2>🏄 Haipl am Surfbrett</h2>
+            <div class="photo-container">
+                <div class="photo-frame">
+                    <img src="ArnoSurfen.heic" alt="Mr. Haipl - Der Apple Guru am Surfbrett">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+            <div class="code-snippet">
+                $ ls /design/projects/
+                > surfboard_project_final.ai<br>
+                > apple_redesign_v3.0.sketch<br>
+                > windows_emulator_proof_of_concept.psd<br><br>
+                $ git status
+                > Nothing to commit, everything is perfect<br><br>
+                $ echo "Design ist nicht nur ein Job, es ist eine Kunstform"
+                > Haipl: "Und ich bin der Künstler!"
+            </div>
+            <p>Hier entfaltet sich die wahre Essenz des Design-Genies. Während andere über Pixel reden, überlegt Haipl über User Experience. Während andere Trends folgen, definiert Haipl sie. Sein Surfbrett ist nicht nur ein Werkzeug - es ist eine Bühne für digitale Innovation. Jede Linie hat Bedeutung, jeder Pinselstrich eine Aussage, jede Farbe eine Emotion. Das Ergebnis? Nicht nur ein Design, sondern eine Revolution.</p>
+            <div class="skill-card">
+                <h3>🎨 Aktuelles Projekt</h3>
+                <div class="code-snippet">
+                    Projekt: "iOS 20 - Wie es hätte sein sollen"<br>
+                    Status: "Top Secret - Nur für Apple-Board"<br>
+                    Deadline: "Wenn Apple bereit ist"<br>
+                    Budget: "Unendlich - Apple bezahlt"
+                </div>
+            </div>
+        </section>
+        
+        <!-- Neue Sektion: Haipl Paragliding -->
+        <section id="paragliding">
+            <h2>🪂 Haipl in der Luft - Paragliding</h2>
+            <div class="video-container">
+                <video id="paraglidingVideo" class="video-player" controls loop muted>
+                    <source src="Video.mov" type="video/quicktime">
+                    <source src="Video.mov" type="video/mp4">
+                    Dein Browser unterstützt kein HTML5 Video.
+                </video>
+                <div class="video-overlay">
+                    <div class="video-play-button" onclick="playVideo()">▶️</div>
+                    <div class="video-title">🪂 Haipl's Gravity-Defying Moments</div>
+                </div>
+            </div>
+            <div class="code-snippet">
+                $ ls /adventure/sports/
+                > paragliding_session_final.mp4<br>
+                > surfboard_epic_waves.jpg<br>
+                > apple_watch_flight_data.csv<br><br>
+                $ altitude_check --current
+                > Current: 1500m | Peak: 2800m | Status: FLYING<br><br>
+                $ echo "Design ist wie Paragliding - man braucht den richtigen Wind"
+                > Haipl: "Und ich habe den Wind im Rücken!"
+            </div>
+            <p>Wenn Haipl nicht gerade Pixel perfekt ausrichtet, dann ist er in der Luft. Paragliding ist nicht nur ein Sport - es ist die perfekte Metapher für Design-Exzellenz. Man braucht Wind (Inspiration), Technik (Skills) und den Mut zu fliegen (Innovation). Jeder Flug ist ein neues Design-Projekt, jede Landung ein erfolgreiches Launch. Die Perspektive von oben? Das ist, wie echte Designer denken - sie sehen das große Bild, während andere nur am Boden bleiben.</p>
+            <div class="skill-card">
+                <h3>🎯 Flug-Statistiken</h3>
+                <div class="code-snippet">
+                    Gesamt-Flugzeit: 42.1337 Stunden<br>
+                    Höchste Höhe: 2800m (über Windows-Usern)<br>
+                    Erfolgreiche Landungen: 100% (wie meine Designs)<br>
+                    Apple Watch Sync: Perfekt<br>
+                    Wind-Toleranz: Nur bei Apple-kompatiblem Wind<br>
+                    Design-Inspiration: Unendlich
+                </div>
+            </div>
+            <div class="interactive-buttons">
+                <button class="interactive-button" onclick="playVideo()">🎬 VIDEO ABspielen</button>
+                <button class="interactive-button" onclick="executeCommand('sudo apt-get install wings')">🪂 Flügel installieren</button>
+                <button class="interactive-button" onclick="executeCommand('echo &quot;Design ist nicht nur 2D, es ist 3D&quot;')">🎨 3D-Design aktivieren</button>
+            </div>
+        </section>
+    </main>
+    <!-- Sound Effects -->
+    <div class="typing-sound" id="typingSound">⌨️ TYPING...</div>
+    
+    <!-- Konami Code -->
+    <div class="konami-activated" id="konamiCode" style="display: none;">
+        <div class="konami-content">
+            <h2>🎮 KONAMI CODE ACTIVATED!</h2>
+            <div class="code-snippet">↑↑↓↓↓←← BA</div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="status-indicator">
+            <div class="status-dot"></div>
+            <span>System Online • Letzte Aktualisierung: $(date)</span>
+        </div>
+        
+        <!-- Neue Sektion: Haipls Weisheiten -->
+        <section id="wisdom">
+            <h2>💡 Haipls Weisheiten</h2>
+            <div class="cli-prompt">
+                <div class="cli-line">$ echo "Design ist nicht nur Pixel-Pushing"</div>
+                <div class="cli-line">> Haipl: "Es ist die Seele des Interfaces"</div>
+                <div class="cli-line">$ echo "Apple macht es richtig, Microsoft macht es kompliziert"</div>
+                <div class="cli-line">> Haipl: "Deswegen benutze ich Apple"</div>
+                <div class="cli-line">$ echo "Warum Windows updaten? Es wird sowieso nie besser"</div>
+                <div class="cli-line">> Haipl: "Genau! Bleib bei macOS"</div>
+            </div>
+            <div class="skill-card">
+                <h3>🎯 Design-Philosophie</h3>
+                <div class="code-snippet">
+                    Regel 1: "Weniger ist manchmal mehr"<br>
+                    Regel 2: "Weiß ist das neue Schwarz"<br>
+                    Regel 3: "Animationen nur mit Zweck"<br>
+                    Regel 4: "Windows ist kein Feature, es ist ein Bug"<br>
+                    Regel 5: "Echte Designer brauchen kein Adobe CC"<br>
+                    Regel 6: "Das beste Design ist unsichtbar"
+                </div>
+            </div>
+        </section>
+        
+        <p>&copy; 2023 Mr. Haipl | Fehler 404: Windows Nicht Gefunden | Design ist meine Religion</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+// Mr. Haipl - The Apple Oracle - Interactive JavaScript
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const button = document.getElementById('darkModeToggle');
+    button.textContent = document.body.classList.contains('dark-mode') ? '☀️ LIGHT MODE' : '🌙 DARK MODE';
+}
+
+// Loading Screen
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('loadingScreen').style.display = 'none';
+    }, 2000);
+});
+
+// Clickable Terminal Commands
+function executeCommand(command) {
+    const sound = document.getElementById('typingSound');
+    sound.classList.add('active');
+    
+    // Play typing sound
+    setTimeout(() => {
+        sound.classList.remove('active');
+    }, 300);
+    
+    // Execute command logic
+    console.log(`Executing: ${command}`);
+    
+    // Easter egg commands
+    if (command.includes('sudo rm -rf /windows/*')) {
+        showWindowsDeleted();
+    } else if (command.includes('sudo apt-get install common-sense')) {
+        showCommonSenseInstalled();
+    }
+}
+
+function showWindowsDeleted() {
+    const message = document.createElement('div');
+    message.className = 'typing-sound active';
+    message.textContent = 'Windows erfolgreich gelöscht! 🎉';
+    message.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--terminal-green);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        font-family: 'SF Mono', monospace;
+        z-index: 10001;
+        animation: fadeInOut 3s ease;
+    `;
+    document.body.appendChild(message);
+    
+    setTimeout(() => {
+        message.remove();
+    }, 3000);
+}
+
+function showCommonSenseInstalled() {
+    const message = document.createElement('div');
+    message.className = 'typing-sound active';
+    message.textContent = 'Common Sense erfolgreich installiert! 🧠';
+    message.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--terminal-green);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        font-family: 'SF Mono', monospace;
+        z-index: 10001;
+        animation: fadeInOut 3s ease;
+    `;
+    document.body.appendChild(message);
+    
+    setTimeout(() => {
+        message.remove();
+    }, 3000);
+}
+
+// Glitch Effect
+function activateGlitch() {
+    const glitchText = document.querySelector('.glitch-text');
+    glitchText.style.animation = 'none';
+    
+    setTimeout(() => {
+        glitchText.style.animation = 'glitch-1 0.3s infinite, glitch-2 0.3s infinite';
+    }, 100);
+    
+    setTimeout(() => {
+        glitchText.style.animation = '';
+    }, 5000);
+}
+
+// Konami Code Easter Egg
+let konamiSequence = [];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+    konamiSequence.push(e.key);
+    
+    // Check for Konami Code: ↑↑↓↓↓←← BA
+    if (konamiSequence.length >= 10) {
+        const lastTen = konamiSequence.slice(-10).join('');
+        if (lastTen === 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowB'.toLowerCase()) {
+            activateKonamiCode();
+        }
+        konamiSequence = [];
+    }
+});
+
+function activateKonamiCode() {
+    const konamiCode = document.getElementById('konamiCode');
+    konamiCode.style.display = 'flex';
+    
+    setTimeout(() => {
+        konamiCode.style.display = 'none';
+    }, 5000);
+}
+
+// Touch Gestures for Mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    
+    // Swipe detection
+    if (Math.abs(diff) > 50) {
+        const swipeCards = document.querySelectorAll('.swipe-card');
+        swipeCards.forEach(card => {
+            card.style.transform = diff > 0 ? 'translateX(20px)' : 'translateX(-20px)';
+        });
+        
+        setTimeout(() => {
+            swipeCards.forEach(card => {
+                card.style.transform = 'translateX(0)';
+            });
+        }, 300);
+    }
+});
+
+// Video player functions
+function playVideo() {
+    const video = document.getElementById('paraglidingVideo');
+    const overlay = document.querySelector('.video-overlay');
+    
+    if (video && overlay) {
+        video.play();
+        overlay.classList.add('hidden');
+        
+        // Show typing sound effect
+        const sound = document.getElementById('typingSound');
+        sound.classList.add('active');
+        sound.textContent = '🎬 VIDEO PLAYING...';
+        
+        setTimeout(() => {
+            sound.classList.remove('active');
+        }, 3000);
+    }
+}
+
+// Add video event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('paraglidingVideo');
+    const overlay = document.querySelector('.video-overlay');
+    
+    if (video && overlay) {
+        // Show overlay when video ends
+        video.addEventListener('ended', () => {
+            overlay.classList.remove('hidden');
+        });
+        
+        // Show overlay when video is paused
+        video.addEventListener('pause', () => {
+            overlay.classList.remove('hidden');
+        });
+        
+        // Hide overlay when video is playing
+        video.addEventListener('play', () => {
+            overlay.classList.add('hidden');
+        });
+        
+        // Click on video to play/pause
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                playVideo();
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+            }
+        });
+    }
+});
+
+// Add CSS animation keyframes dynamically
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeInOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
