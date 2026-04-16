@@ -211,6 +211,26 @@ function playMusic() {
     }, 3000);
 }
 
+// Update current date dynamically
+function updateCurrentDate() {
+    const now = new Date();
+    const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+    
+    const dateElement = document.getElementById('currentDate');
+    if (dateElement) {
+        dateElement.textContent = `${month} ${year}`;
+    }
+}
+
+// Update date on page load
+document.addEventListener('DOMContentLoaded', () => {
+    updateCurrentDate();
+    // Update every minute to keep it current
+    setInterval(updateCurrentDate, 60000);
+});
+
 // Add CSS animation keyframes dynamically
 const style = document.createElement('style');
 style.textContent = `
