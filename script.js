@@ -261,6 +261,14 @@ function hideMatrixLoader() {
     }
 }
 
+// Smooth scroll to section
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 // Update date on page load
 document.addEventListener('DOMContentLoaded', () => {
     updateCurrentDate();

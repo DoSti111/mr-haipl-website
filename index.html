@@ -18,61 +18,82 @@
             </div>
         </div>
     </div>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-text">INITIALIZING MR. HAIPL SYSTEM...</div>
-    </div>
     
-    <!-- Dark Mode Toggle -->
-    <button class="interactive-button" id="darkModeToggle" onclick="toggleDarkMode()">🌙 DARK MODE</button>
-    
-    <!-- Interactive Terminal Commands -->
-    <button class="interactive-button" onclick="executeCommand('sudo rm -rf /windows/*')">🗑️ WINDOWS DELETE</button>
-    <button class="interactive-button" onclick="executeCommand('sudo apt-get install common-sense')">🧠 INSTALL COMMON SENSE</button>
-    
-    <!-- Glitch Text Easter Egg -->
-    <div class="glitch-text" data-text="EASTER EGG ACTIVATED" onclick="activateGlitch()">SYSTEM COMPROMISED</div>
-    
-    <!-- Swipe Sections -->
-    <div class="swipe-section">
-        <div class="swipe-card">
-            <h3>Swipe für Easter Eggs</h3>
-            <div class="code-snippet">← Swipe für versteckte Features</div>
+    <!-- Apple-style Navigation -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">🍏 Mr. Haipl</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">Über</a></li>
+                <li><a href="#paragliding" class="nav-link">Paragliding</a></li>
+                <li><a href="#parfum" class="nav-link">iConfidence</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-button" id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+                <button class="nav-button" onclick="executeCommand('sudo rm -rf /windows/*')">🗑️</button>
+            </div>
         </div>
-    </div>
-    <header>
-    <div class="terminal-header">
-        <div class="terminal-dot"></div>
-        <div class="terminal-dot"></div>
-        <div class="terminal-dot"></div>
-    </div>
-    <div class="terminal-content">
-        <h1>Mr. Haipl – The Apple Oracle</h1>
-        <h2>Wenn Apple etwas kann, kann er es besser. Seit 1984.</h2>
-        <div class="photo-container">
+    </nav>
+    <!-- Apple-style Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Mr. Haipl</h1>
+            <h2 class="hero-subtitle">The Apple Oracle</h2>
+            <p class="hero-description">Wenn Apple etwas kann, kann er es besser. Seit 1984.</p>
+            <div class="hero-actions">
+                <button class="hero-button primary" onclick="scrollToSection('about')">Mehr erfahren</button>
+                <button class="hero-button secondary" onclick="executeCommand('sudo apt-get install apple-knowledge')">Apple-Wissen</button>
+            </div>
+        </div>
+        <div class="hero-image">
             <div class="photo-frame">
-                <img src="MrHaipl.JPG" alt="Mr. Haipl - Der Apple Guru">
+                <img src="MrHaipl.JPG" alt="Mr. Haipl - The Apple Oracle">
                 <div class="scan-line"></div>
             </div>
         </div>
-    </div>
-</header>
-    <main>
-                <section id="about">
-            <h2>System-Informationen</h2>
-            <div class="code-snippet">
-                <div class="clickable-command" onclick="executeCommand('wer_bin_ich')">$ wer_bin_ich<br>
-                mr_haipl_apple_orakel<br><br>
-                <div class="clickable-command" onclick="executeCommand('uname -a')">$ uname -a<br>
-                Darwin kernel 1984.0.0 AppleOracle-Edition<br><br>
-                <div class="clickable-command" onclick="executeCommand('history | grep -E \'(design|apple|mac)\'')">$ history | grep -E '(design|apple|mac)'<br>
-                ... 42.1337 Einträge gefunden<br><br>
-                <div class="clickable-command" onclick="executeCommand('blacklist_check --os')">$ blacklist_check --os<br>
-                Windows: BLOCKIERT<br>
-                Android: BLOCKIERT<br>
-                Linux: "Nur für Server"
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <!-- Über Mich Sektion -->
+        <section id="about" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">👨‍💻 Über den Oracle</h2>
+                <p class="section-subtitle">Der ultimative Apple-Guru und Design-Experte</p>
             </div>
-            <p>Gelernter Grafiker. Seit 1984 am System. Kennt jede Pixel-Perfektion, jeden Design-Grundsatz, jeden Terminal-Befehl. Wenn Cupertino eine neue Idee hat, hat Mr. Haipl sie schon gestern implementiert. Sein Auge für Details ist präziser als ein Retina-Display bei 300dpi. Windows-Nutzer betrachtet er als Menschen in Not, die dringend Rettung brauchen.</p>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Grafik-Design</h3>
+                    <p>Expert Level mit 20+ Jahren Erfahrung</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">🍏</div>
+                    <h3>Apple-Kenntnisse</h3>
+                    <p>God Mode - Komplette Ökosystem-Beherrschung</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">📱</div>
+                    <h3>iPhone-Optimierung</h3>
+                    <p>Legendary - Secret Edition Experte</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">🪟</div>
+                    <h3>Windows-Vermeidung</h3>
+                    <p>Olympic Gold - Perfekte Ausweichmanöver</p>
+                </div>
+            </div>
+            <div class="code-snippet">
+                $ haipl_status --current<br>
+                > Beruf: "Grafik-Designer & Apple-Guru"<br>
+                > Spezialität: "iPhone-Optimierung & Windows-Hass"<br>
+                > Motto: "Wenn es nicht Apple ist, ist es Müll"<br>
+                > Achievement: "100% Apple-Ökosystem Kompatibilität"<br>
+                > Current Device: "iPhone 19 Pro Max (Secret Edition)"
+            </div>
         </section>
         <section id="skills">
             <h2>Technische Spezifikationen</h2>
