@@ -1034,6 +1034,16 @@ section p {
     box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
     transform: rotate(-2deg);
     transition: all 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#parfum .photo-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
 }
 
 #parfum .photo-frame:hover {
