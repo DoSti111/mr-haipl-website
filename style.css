@@ -991,7 +991,7 @@ section p {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     padding: 60px 20px;
     text-align: center;
-    border-top: 2px solid var(--terminal-orange);
+    border-top: 2px solid var(--terminal-green);
     position: relative;
 }
 
@@ -1013,16 +1013,16 @@ section p {
 }
 
 #parfum h2 {
-    color: var(--terminal-orange);
+    color: var(--terminal-green);
     font-size: 2.5em;
     margin-bottom: 30px;
-    text-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
     animation: perfume-glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes perfume-glow {
-    0% { text-shadow: 0 0 20px rgba(255, 165, 0, 0.5); }
-    100% { text-shadow: 0 0 30px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.4); }
+    0% { text-shadow: 0 0 20px rgba(0, 255, 65, 0.5); }
+    100% { text-shadow: 0 0 30px rgba(0, 255, 65, 0.8), 0 0 40px rgba(0, 255, 65, 0.4); }
 }
 
 #parfum .photo-container {
@@ -1033,8 +1033,8 @@ section p {
 }
 
 #parfum .photo-frame {
-    border: 3px solid var(--terminal-orange);
-    box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+    border: 3px solid var(--terminal-green);
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
     transform: rotate(-2deg);
     transition: all 0.3s ease;
     overflow: hidden;
@@ -1052,13 +1052,13 @@ section p {
 
 #parfum .photo-frame:hover {
     transform: rotate(0deg) scale(1.02);
-    box-shadow: 0 0 40px rgba(255, 165, 0, 0.5);
+    box-shadow: 0 0 40px rgba(0, 255, 65, 0.5);
 }
 
 #parfum .code-snippet {
-    background: rgba(255, 165, 0, 0.1);
-    border: 1px solid rgba(255, 165, 0, 0.3);
-    color: var(--terminal-orange);
+    background: rgba(0, 255, 65, 0.1);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    color: var(--terminal-green);
     padding: 25px;
     border-radius: 8px;
     font-family: 'SF Mono', monospace;
@@ -1072,8 +1072,8 @@ section p {
 }
 
 #parfum .skill-card {
-    background: rgba(255, 165, 0, 0.05);
-    border: 1px solid rgba(255, 165, 0, 0.2);
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.2);
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 30px;
@@ -1083,7 +1083,7 @@ section p {
 }
 
 #parfum .skill-card h3 {
-    color: var(--terminal-orange);
+    color: var(--terminal-green);
     margin-bottom: 20px;
     font-size: 1.3em;
 }
@@ -1097,7 +1097,7 @@ section p {
 }
 
 #parfum .interactive-button {
-    background: linear-gradient(135deg, var(--terminal-orange), #ff8c00);
+    background: linear-gradient(135deg, var(--terminal-green), #00cc33);
     color: #000;
     border: none;
     padding: 12px 24px;
@@ -1112,9 +1112,9 @@ section p {
 }
 
 #parfum .interactive-button:hover {
-    background: linear-gradient(135deg, #ff8c00, var(--terminal-orange));
+    background: linear-gradient(135deg, #00cc33, var(--terminal-green));
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
 }
 
 /* Skills grid */
