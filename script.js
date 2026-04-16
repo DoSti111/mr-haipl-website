@@ -135,7 +135,12 @@ function playVideo() {
     const overlay = document.querySelector('.video-overlay');
     
     if (video && overlay) {
-        video.play();
+        video.muted = false;
+        video.play().catch(error => {
+            console.log('Video play failed:', error);
+            // Try autoplay with user interaction
+            video.play();
+        });
         overlay.classList.add('hidden');
         
         // Show typing sound effect
@@ -155,9 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.video-overlay');
     
     if (video && overlay) {
+        // Handle autoplay
+        video.addEventListener('canplay', () => {
+            // Video is ready to play
+            overlay.classList.add('hidden');
+        });
+        
         // Show overlay when video ends
         video.addEventListener('ended', () => {
             overlay.classList.remove('hidden');
+            video.currentTime = 0; // Reset to beginning
         });
         
         // Show overlay when video is paused
@@ -178,6 +190,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 video.pause();
                 overlay.classList.remove('hidden');
             }
+        });
+        
+        // Handle video errors
+        video.addEventListener('error', (e) => {
+            console.error('Video error:', e);
+            overlay.innerHTML = '<div class="video-title">❌ Video konnte nicht geladen werden</div>';
         });
     }
 });
