@@ -1169,7 +1169,7 @@ section h2 {
 
 section h2::before {
     content: '>';
-    color: var(--terminal-green);
+    color: #007aff;
     font-weight: 700;
     animation: blink 1s infinite;
 }
@@ -1261,8 +1261,8 @@ section p {
 }
 
 #parfum .photo-frame {
-    border: 3px solid var(--terminal-green);
-    box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+    border: 3px solid #007aff;
+    box-shadow: 0 0 30px rgba(0, 122, 255, 0.3);
     transform: rotate(-2deg);
     transition: all 0.3s ease;
     overflow: hidden;
@@ -1280,13 +1280,13 @@ section p {
 
 #parfum .photo-frame:hover {
     transform: rotate(0deg) scale(1.02);
-    box-shadow: 0 0 40px rgba(0, 255, 65, 0.5);
+    box-shadow: 0 0 40px rgba(0, 122, 255, 0.5);
 }
 
 #parfum .code-snippet {
-    background: rgba(0, 255, 65, 0.1);
-    border: 1px solid rgba(0, 255, 65, 0.3);
-    color: var(--terminal-green);
+    background: #ffffff;
+    border: 1px solid #007aff;
+    color: #007aff;
     padding: 25px;
     border-radius: 8px;
     font-family: 'SF Mono', monospace;
@@ -1300,8 +1300,8 @@ section p {
 }
 
 #parfum .skill-card {
-    background: rgba(0, 255, 65, 0.05);
-    border: 1px solid rgba(0, 255, 65, 0.2);
+    background: #ffffff;
+    border: 1px solid #007aff;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 30px;
@@ -1311,7 +1311,7 @@ section p {
 }
 
 #parfum .skill-card h3 {
-    color: var(--terminal-green);
+    color: #007aff;
     margin-bottom: 20px;
     font-size: 1.3em;
 }
@@ -1325,8 +1325,8 @@ section p {
 }
 
 #parfum .interactive-button {
-    background: linear-gradient(135deg, var(--terminal-green), #00cc33);
-    color: #000;
+    background: linear-gradient(135deg, #007aff, #0056b3);
+    color: #ffffff;
     border: none;
     padding: 12px 24px;
     border-radius: 8px;
@@ -1340,9 +1340,9 @@ section p {
 }
 
 #parfum .interactive-button:hover {
-    background: linear-gradient(135deg, #00cc33, var(--terminal-green));
+    background: linear-gradient(135deg, #0056b3, #007aff);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 122, 255, 0.3);
 }
 
 /* Skills grid */
@@ -1354,7 +1354,7 @@ section p {
 }
 
 .skill-card {
-    background: linear-gradient(135deg, var(--apple-light-gray), white);
+    background: #ffffff;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid rgba(0, 122, 255, 0.1);
@@ -1375,12 +1375,13 @@ section p {
 
 /* Command line interface */
 .cli-prompt {
-    background: var(--code-bg);
-    color: var(--terminal-green);
+    background: #ffffff;
+    color: #007aff;
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
     font-family: 'SF Mono', monospace;
+    border: 1px solid rgba(0, 122, 255, 0.1);
 }
 
 .cli-line {
@@ -1391,7 +1392,7 @@ section p {
 
 .cli-prompt::before {
     content: '$ ';
-    color: var(--apple-green);
+    color: #007aff;
     font-weight: 700;
 }
 
@@ -1414,9 +1415,9 @@ section p {
 }
 
 .specs-table th {
-    background: var(--apple-light-gray);
+    background: #ffffff;
     font-weight: 600;
-    color: var(--apple-black);
+    color: #000000;
 }
 
 .specs-table tr:hover {
@@ -1453,11 +1454,12 @@ section p {
 footer {
     text-align: center;
     padding: 30px;
-    background: var(--code-bg);
-    color: var(--terminal-green);
+    background: #ffffff;
+    color: #000000;
     margin: 40px 20px 20px;
     border-radius: 8px;
     font-family: 'SF Mono', monospace;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive design */
