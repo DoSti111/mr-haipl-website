@@ -1190,6 +1190,16 @@ section p {
     margin: 20px 0;
 }
 
+#surfboard p {
+    background: #ffffff;
+    color: #000000;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
 /* Code blocks */
 .code-snippet {
     background: #ffffff;
