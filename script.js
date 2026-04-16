@@ -160,33 +160,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.video-overlay');
     
     if (video && overlay) {
+        console.log('Video element found:', video);
+        console.log('Video sources:', video.querySelectorAll('source'));
+        
+        // Force video load
+        video.load();
+        
+        // Handle video loaded
+        video.addEventListener('loadeddata', () => {
+            console.log('Video data loaded');
+            overlay.classList.add('hidden');
+        });
+        
         // Handle autoplay
         video.addEventListener('canplay', () => {
-            // Video is ready to play
+            console.log('Video can play');
             overlay.classList.add('hidden');
         });
         
         // Show overlay when video ends
         video.addEventListener('ended', () => {
+            console.log('Video ended');
             overlay.classList.remove('hidden');
             video.currentTime = 0; // Reset to beginning
         });
         
         // Show overlay when video is paused
         video.addEventListener('pause', () => {
+            console.log('Video paused');
             overlay.classList.remove('hidden');
         });
         
         // Hide overlay when video is playing
         video.addEventListener('play', () => {
+            console.log('Video playing');
             overlay.classList.add('hidden');
         });
         
         // Click on video to play/pause
         video.addEventListener('click', () => {
             if (video.paused) {
+                console.log('Video clicked - playing');
                 playVideo();
             } else {
+                console.log('Video clicked - pausing');
                 video.pause();
                 overlay.classList.remove('hidden');
             }
@@ -195,8 +212,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle video errors
         video.addEventListener('error', (e) => {
             console.error('Video error:', e);
+            console.error('Video error details:', video.error);
             overlay.innerHTML = '<div class="video-title">❌ Video konnte nicht geladen werden</div>';
         });
+        
+        // Handle video stalled
+        video.addEventListener('stalled', () => {
+            console.log('Video stalled - trying to reload');
+            video.load();
+        });
+    } else {
+        console.error('Video element not found!');
     }
 });
 
