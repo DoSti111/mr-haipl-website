@@ -6,16 +6,16 @@
 }
 
 :root {
-    --apple-black: #333333;
-    --apple-gray: #f0f0f0;
+    --apple-black: #000000;
+    --apple-gray: #ffffff;
     --apple-light-gray: #ffffff;
     --apple-blue: #007aff;
-    --apple-green: #34c759;
-    --apple-orange: #ff9500;
-    --apple-red: #ff3b30;
-    --apple-purple: #af52de;
-    --terminal-green: #00ff41;
-    --code-bg: #f8f8f8;
+    --apple-green: #007aff;
+    --apple-orange: #007aff;
+    --apple-red: #007aff;
+    --apple-purple: #007aff;
+    --terminal-green: #007aff;
+    --code-bg: #ffffff;
 }
 
 body {
@@ -1214,9 +1214,9 @@ section p {
 }
 
 #paragliding .code-snippet {
-    background: rgba(0, 255, 65, 0.1);
-    border: 1px solid rgba(0, 255, 65, 0.3);
-    color: var(--terminal-green);
+    background: #ffffff;
+    border: 1px solid #007aff;
+    color: #007aff;
     padding: 20px;
     border-radius: 8px;
     font-family: 'SF Mono', monospace;
@@ -1244,7 +1244,7 @@ section p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" fill="%2300ff41" opacity="0.05">👔</text></svg>') repeat;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" fill="%23007aff" opacity="0.05">👔</text></svg>') repeat;
     pointer-events: none;
     z-index: 1;
 }
@@ -1444,8 +1444,8 @@ section p {
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background: rgba(52, 199, 89, 0.1);
-    border: 1px solid var(--apple-green);
+    background: rgba(0, 122, 255, 0.1);
+    border: 1px solid #007aff;
     border-radius: 20px;
     font-size: 0.9em;
     font-weight: 500;
@@ -1455,7 +1455,7 @@ section p {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--apple-green);
+    background: #007aff;
     animation: pulse 2s infinite;
 }
 
