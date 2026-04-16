@@ -129,7 +129,69 @@ function activateKonamiCode() {
 
 // Touch gestures removed - no swipe functionality
 
-// Video functions removed - no video section
+// Video player functions with music support
+function playVideo() {
+    const video = document.getElementById('paraglidingVideo');
+    const overlay = document.querySelector('.video-overlay');
+    
+    if (video && overlay) {
+        video.play();
+        overlay.classList.add('hidden');
+        
+        // Show typing sound effect
+        const sound = document.getElementById('typingSound');
+        sound.classList.add('active');
+        sound.textContent = '🎬 VIDEO PLAYING...';
+        
+        setTimeout(() => {
+            sound.classList.remove('active');
+        }, 3000);
+    }
+}
+
+// Add video event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('paraglidingVideo');
+    const overlay = document.querySelector('.video-overlay');
+    
+    if (video && overlay) {
+        // Show overlay when video ends
+        video.addEventListener('ended', () => {
+            overlay.classList.remove('hidden');
+        });
+        
+        // Show overlay when video is paused
+        video.addEventListener('pause', () => {
+            overlay.classList.remove('hidden');
+        });
+        
+        // Hide overlay when video is playing
+        video.addEventListener('play', () => {
+            overlay.classList.add('hidden');
+        });
+        
+        // Click on video to play/pause
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                playVideo();
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+            }
+        });
+    }
+});
+
+// Music player function
+function playMusic() {
+    const sound = document.getElementById('typingSound');
+    sound.classList.add('active');
+    sound.textContent = '🎵 HAIPL\'S FLIGHT THEME PLAYING...';
+    
+    setTimeout(() => {
+        sound.classList.remove('active');
+    }, 3000);
+}
 
 // Add CSS animation keyframes dynamically
 const style = document.createElement('style');
