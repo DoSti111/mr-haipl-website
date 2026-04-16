@@ -1180,10 +1180,14 @@ section h2::before {
 }
 
 section p {
-    color: var(--apple-black);
+    color: #000000;
     font-size: 1.1em;
     line-height: 1.8;
     font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 /* Code blocks */
