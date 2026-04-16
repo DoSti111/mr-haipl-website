@@ -118,90 +118,18 @@ function activateKonamiCode() {
     const konamiCode = document.getElementById('konamiCode');
     konamiCode.style.display = 'flex';
     
+    // Add some fun effect
+    document.body.style.animation = 'glitch 0.5s';
+    
     setTimeout(() => {
         konamiCode.style.display = 'none';
-    }, 5000);
+        document.body.style.animation = '';
+    }, 3000);
 }
 
-// Touch Gestures for Mobile
-let touchStartX = 0;
-let touchEndX = 0;
+// Touch gestures removed - no swipe functionality
 
-document.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-});
-
-document.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    
-    // Swipe detection
-    if (Math.abs(diff) > 50) {
-        const swipeCards = document.querySelectorAll('.swipe-card');
-        swipeCards.forEach(card => {
-            card.style.transform = diff > 0 ? 'translateX(20px)' : 'translateX(-20px)';
-        });
-        
-        setTimeout(() => {
-            swipeCards.forEach(card => {
-                card.style.transform = 'translateX(0)';
-            });
-        }, 300);
-    }
-});
-
-// Video player functions
-function playVideo() {
-    const video = document.getElementById('paraglidingVideo');
-    const overlay = document.querySelector('.video-overlay');
-    
-    if (video && overlay) {
-        video.play();
-        overlay.classList.add('hidden');
-        
-        // Show typing sound effect
-        const sound = document.getElementById('typingSound');
-        sound.classList.add('active');
-        sound.textContent = '🎬 VIDEO PLAYING...';
-        
-        setTimeout(() => {
-            sound.classList.remove('active');
-        }, 3000);
-    }
-}
-
-// Add video event listeners
-document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('paraglidingVideo');
-    const overlay = document.querySelector('.video-overlay');
-    
-    if (video && overlay) {
-        // Show overlay when video ends
-        video.addEventListener('ended', () => {
-            overlay.classList.remove('hidden');
-        });
-        
-        // Show overlay when video is paused
-        video.addEventListener('pause', () => {
-            overlay.classList.remove('hidden');
-        });
-        
-        // Hide overlay when video is playing
-        video.addEventListener('play', () => {
-            overlay.classList.add('hidden');
-        });
-        
-        // Click on video to play/pause
-        video.addEventListener('click', () => {
-            if (video.paused) {
-                playVideo();
-            } else {
-                video.pause();
-                overlay.classList.remove('hidden');
-            }
-        });
-    }
-});
+// Video functions removed - no video section
 
 // Add CSS animation keyframes dynamically
 const style = document.createElement('style');
